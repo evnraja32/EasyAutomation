@@ -42,5 +42,8 @@ public class Browser {
 
 
 	}
-
+	
+	public void closeBrowser(){
+		driver.close();
+	}
 }

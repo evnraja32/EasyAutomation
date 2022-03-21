@@ -6,9 +6,11 @@ import elements.Browser;
 
 public class LaunchBrowserTest {
 
-	@Test
+	@Test(description = "Launch chrome browser")
 	public void f() {
 
-	new Browser("chrome");
+		Browser browser = new Browser("chrome");
+		browser.closeBrowser();
+
 	}
 }
