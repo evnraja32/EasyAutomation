@@ -1,14 +1,12 @@
-package elements;
+package com.easyautomation.driver.factory;
 
 import java.time.Duration;
-import java.util.Properties;
 
 import org.openqa.selenium.InvalidArgumentException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver.Timeouts;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -16,22 +14,15 @@ import org.openqa.selenium.support.ui.FluentWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Browser {
+public abstract class WebBrowser {
 
-	protected static RemoteWebDriver driver = null;
-
-	public Browser(String browser) {
-
+	
+	public static RemoteWebDriver init(String browser) {
+		RemoteWebDriver driver = null;
 		String stepDesc = "Launching web application: url";
 		switch (browser) {
 		case "chrome":
 			WebDriverManager.chromedriver().setup();
-//			ChromeOptions chromeOptions = new ChromeOptions();
-//			chromeOptions.setAcceptInsecureCerts(true);
-//			chromeOptions.setHeadless(true);
-//			chromeOptions.addArguments("--incognito");
-//			chromeOptions.setPageLoadTimeout(Duration.ofSeconds(30));
-//			chromeOptions.setScriptTimeout(Duration.ofMinutes(20));
 			driver = new ChromeDriver();
 			break;
 		case "edge":
@@ -54,10 +45,8 @@ public class Browser {
 		
 		((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-
+		
+		return driver;
 	}
 	
-	public void closeBrowser(){
-		driver.close();
-	}
 }

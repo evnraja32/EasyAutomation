@@ -7,10 +7,10 @@ import elements.Browser;
 public class LaunchBrowserTest {
 
 	@Test(description = "Launch chrome browser")
-	public void f() {
+	public void testMethod() {
 
 		Browser browser = new Browser("chrome");
 		browser.closeBrowser();
-
+		
 	}
 }
