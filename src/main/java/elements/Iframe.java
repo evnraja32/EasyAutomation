@@ -9,7 +9,7 @@ public class Iframe extends Element {
 	}
 	
 	
-	public boolean switchToFrame
+	public boolean switchToFrame;
 	
 	
 

@@ -18,7 +18,7 @@ public class SquareRootBinarySearchTest {
 	}
 
 	public int mySqrt(int x) {
-		System.out.println("Fiding sq root for: " + x);
+		System.out.println("Finding sq root for: " + x);
 		double nearestPerfectSquare = 0, squareRoot = 0;
 		if (x == 0)
 			return (int) squareRoot;
