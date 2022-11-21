@@ -8,6 +8,10 @@ public class ArrayShiftWithNodes {
     @Test
     public void testMethod(){
         Assert.assertEquals(moveEvenNumberToLast(new int[]{2,1,3,6,8,10,9}), new int[]{1, 3, 9, 2, 6, 8, 10});
+    }
+
+    @Test
+    public void testMethod2(){
         Assert.assertEquals(moveEvenNumberToLast(new int[]{13, 8, 20, 10, 7, 4, 19, 11, 12, 9, 16, 1, 6, 3, 18, 14, 5, 15, 17, 2}), new int[]{13, 7, 19, 11, 9, 1, 3, 5, 15, 17, 8, 20, 10, 4, 12, 16, 6, 18, 14, 2});
     }
 
@@ -41,7 +45,7 @@ public class ArrayShiftWithNodes {
                 }
                 lastOddNode = currentNode;
             }
-            System.out.println(firstNode.toString());
+//            System.out.println(firstNode.toString());
         }
 
         int[] processedArray = new int[nums.length];
