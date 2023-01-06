@@ -159,7 +159,11 @@
 			<version>5.0.1</version>
 			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>org.openjdk.nashorn</groupId>
+			<artifactId>nashorn-core</artifactId>
+			<version>15.2</version>
+		</dependency>
 
 	</dependencies>
 	<build>
